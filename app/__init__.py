@@ -4,11 +4,10 @@ from flask import Flask
 from pymongo import MongoClient
 
 uri = "mongodb://$OPENSHIFT_MONGODB_DB_HOST:$OPENSHIFT_MONGODB_DB_PORT"
-#uri = "mongodb://localhost:27017"
 client = MongoClient(uri)
-db = client['pfmoo']
+db = client['database']
 #for mongodb on opensfhit
-db.authenticate('admin', 'CK5s3mNkuwfb')
+db.authenticate('admin', 'XXXXX')
 
 app = Flask(__name__)
 

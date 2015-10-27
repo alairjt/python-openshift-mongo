@@ -76,5 +76,22 @@ MongoDB 2.4 database added.  Please make note of these credentials:
 Connection URL: mongodb://$OPENSHIFT_MONGODB_DB_HOST:$OPENSHIFT_MONGODB_DB_PORT/
 ########
 
+## Connect to ssh (ssh XXXXXXXXXXXXXXX@appname-domain.rhcloud.com)
+
+echo $OPENSHIFT_MONGODB_DB_HOST
+> 127.6.16.XXX
+
+echo $OPENSHIFT_MONGODB_DB_PORT
+> 27017
+
+
+## Change in app/__init__py
+
+From: uri = "mongodb://$OPENSHIFT_MONGODB_DB_HOST:$OPENSHIFT_MONGODB_DB_PORT"
+To: uri = "mongodb://127.6.16.XXX:27017"
+
+Check database name and authenticate params.
+
+
 
 
