@@ -3,7 +3,7 @@ __author__ = 'alair.tavares'
 from flask import Flask
 from pymongo import MongoClient
 
-uri = "mongodb://127.6.16.130:27017"
+uri = "mongodb://$OPENSHIFT_MONGODB_DB_HOST:$OPENSHIFT_MONGODB_DB_PORT"
 #uri = "mongodb://localhost:27017"
 client = MongoClient(uri)
 db = client['pfmoo']
