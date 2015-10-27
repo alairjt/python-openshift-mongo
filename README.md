@@ -29,10 +29,52 @@ Create new app
 
 Python 3.3
 
-Configure app ( If you provide a Git URL, your application will start with an exact copy of the code and configuration provided in this Git repository.)
+Configure app
+    - If you provide a Git URL:
+        - Ex.: https://github.com/alairjt/python-openshift-mongo.git (Don't use git@github.com)
+        - It's necessary add public key. (Settings -> Add new key)
+        - Your application will start with an exact copy of the code and configuration provided in this Git repository.
+
 
 Create application
 
+########
+Making code changes
+Install the Git client for your operating system, and from your command line run
+
+git clone ssh://xxxxx@appname-domain.rhcloud.com/~/git/appname.git/
+cd appname/
+This will create a folder with the source code of your application. After making a change, add, commit, and push your changes.
+
+git add .
+git commit -m 'My changes'
+git push
+
+When you push changes the OpenShift server will report back its status on deploying your code. The server will run any of your configured deploy hooks and then restart the application.
+########
+
+
+#### ADD MONGODB
+
+Applications
+
+Edit app
+
+## Databases
+
+Add MongoDB X.X
+
+Add Cartidgre
+
+########
+MongoDB 2.4 database added.  Please make note of these credentials:
+
+   Root User:     admin
+   Root Password: XXXXXXXXXX
+   Database Name: appname
+
+Connection URL: mongodb://$OPENSHIFT_MONGODB_DB_HOST:$OPENSHIFT_MONGODB_DB_PORT/
+########
 
 
 
