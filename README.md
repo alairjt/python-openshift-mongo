@@ -1,4 +1,5 @@
-# Running APP Sample: http://pfmoo-muvisapi.rhcloud.com/
+# Running APP Sample:
+# http://pfmoo-muvisapi.rhcloud.com/
 
 # python-openshift-mongo
 Python + Flask + Mongo for OpenShift
